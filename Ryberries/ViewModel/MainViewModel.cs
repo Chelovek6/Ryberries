@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Input;
+using GalaSoft.MvvmLight.Command;
+
 
 namespace Ryberries.ViewModel
 {
@@ -31,15 +33,25 @@ namespace Ryberries.ViewModel
 
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+       // public ICommand ShowUserControl1Command => new RelayCommand(ShowUserControl1);
+       //public ICommand ShowUserControl2Command => new RelayCommand(ShowUserControl2);
+        public ICommand ShowUserControl3Command => new RelayCommand(ShowUserControl3);
+       // public ICommand ShowUserControl4Command => new RelayCommand(ShowUserControl4);
+        public ICommand ShowUserControl10Command => new RelayCommand(ShowUserControl10);
+        
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-       
+
         private void ShowUserControl3()
         {
             LocatorView.CurrentView.UserControl.Content = new UserControl1();
         }
-        
+        private void ShowUserControl10()
+        {
+            LocatorView.CurrentView.UserControl.Content = new UsersMainView();
+        }
 
+        
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
         public event PropertyChangedEventHandler PropertyChanged;
 

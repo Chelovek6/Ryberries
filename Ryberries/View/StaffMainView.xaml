@@ -7,6 +7,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Staff Main View" FontSize="24" FontWeight="Bold" Foreground="#cc02c2" Margin="0 0 0 20"/>
+            <Button Content="View Goods"  Width="120" Margin="0 0 10 0" Foreground="#cc02c2" Background="#FFD9E6EB" BorderBrush="#FFD9E6EB" Height="40"/>
+            <Button Content="Log Out"  Width="120" Foreground="#cc02c2" Background="#FFD9E6EB" BorderBrush="#FFD9E6EB" Height="40" Command="{Binding ShowUserControl5Command}"/>
+        </StackPanel>
     </Grid>
 </UserControl>

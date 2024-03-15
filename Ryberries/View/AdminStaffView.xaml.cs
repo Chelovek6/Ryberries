@@ -16,14 +16,13 @@ using System.Windows.Shapes;
 namespace Ryberries.View
 {
     /// <summary>
-    /// Логика взаимодействия для UserControl1.xaml
+    /// Логика взаимодействия для AdminStaffView.xaml
     /// </summary>
-    public partial class UserControl1 : UserControl
+    public partial class AdminStaffView : UserControl
     {
-        public UserControl1()
+        public AdminStaffView()
         {
             InitializeComponent();
         }
-
     }
 }

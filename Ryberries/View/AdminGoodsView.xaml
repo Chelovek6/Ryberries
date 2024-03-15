@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="Ryberries.View.StuffGoodsView"
+﻿<UserControl x:Class="Ryberries.View.AdminGoodsView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -16,6 +16,6 @@
                 <DataGridTextColumn Header="Rating" Binding="{Binding Rating}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Back"  HorizontalAlignment="Left" Margin="680,384,0,0" VerticalAlignment="Top" Height="46" Width="100" Foreground="#cc02c2" Background="#FFD9E6EB" BorderBrush="#FFD9E6EB" Command="{Binding ShowUserControl7Command}"/>
+        <Button Content="Back"  HorizontalAlignment="Left" Margin="690,394,0,0" VerticalAlignment="Top" Height="46" Width="100" Foreground="#cc02c2" Background="#FFD9E6EB" BorderBrush="#FFD9E6EB" Command="{Binding ShowUserControl9Command}"/>
     </Grid>
 </UserControl>

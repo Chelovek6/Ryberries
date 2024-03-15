@@ -8,7 +8,7 @@ namespace Ryberries.Model
 {
     internal class Goods
     {
-        public int Article;
+        public int GoodsArticle;
         public string Name;
         public int DealerArticle;
 
@@ -16,9 +16,9 @@ namespace Ryberries.Model
         public float Rating;
         
 
-        public Goods(int article, string name, int dealerArticle, int cost, float rating)
+        public Goods(int goodsArticle, string name, int dealerArticle, int cost, float rating)
         {
-            Article = article;
+            GoodsArticle = goodsArticle;
             Name = name;
             DealerArticle = dealerArticle;
             Cost = cost;
