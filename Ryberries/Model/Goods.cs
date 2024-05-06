@@ -8,13 +8,11 @@ namespace Ryberries.Model
 {
     internal class Goods
     {
-        public int GoodsArticle;
-        public string Name;
-        public int DealerArticle;
-
-        public int Cost;
-        public float Rating;
-        
+        public int GoodsArticle { get; set; }
+        public string Name { get; set; }
+        public int DealerArticle { get; set; }
+        public int Cost { get; set; }
+        public float Rating { get; set; }
 
         public Goods(int goodsArticle, string name, int dealerArticle, int cost, float rating)
         {
@@ -25,4 +23,6 @@ namespace Ryberries.Model
             Rating = rating;
         }
     }
+
+
 }

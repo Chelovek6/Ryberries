@@ -7,15 +7,24 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <DataGrid x:Name="goodsDataGrid" AutoGenerateColumns="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <DataGrid x:Name="goodsGrid" AutoGenerateColumns="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Goods Article" Binding="{Binding GoodsArticle}"/>
-                <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
-                <DataGridTextColumn Header="Dealer Article" Binding="{Binding DealerArticle}"/>
-                <DataGridTextColumn Header="Cost" Binding="{Binding Cost}"/>
-                <DataGridTextColumn Header="Rating" Binding="{Binding Rating}"/>
+                <DataGridTextColumn Header="Номер Товара" Binding="{Binding GoodsArticle}"/>
+                <DataGridTextColumn Header="Название" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Номер Продавца" Binding="{Binding DealerArticle}"/>
+                <DataGridTextColumn Header="Цена" Binding="{Binding Cost}"/>
+                <DataGridTextColumn Header="Рейтинг" Binding="{Binding Rating}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Back"  HorizontalAlignment="Left" Margin="690,394,0,0" VerticalAlignment="Top" Height="46" Width="100" Foreground="#cc02c2" Background="#FFD9E6EB" BorderBrush="#FFD9E6EB" Command="{Binding ShowUserControl9Command}"/>
+        <StackPanel HorizontalAlignment="Center"  Grid.Row="1" Orientation="Horizontal">
+            <Button x:Name="updateButton" Content="Обновить"  Width="100" Foreground="#cc02c2" Background="#FFD9E6EB" BorderBrush="#FFD9E6EB"/>
+            <!--<Button x:Name="deleteButton" Content="Удалить" Click="deleteButton_Click" Width="100" Foreground="#cc02c2" Background="#FFD9E6EB" BorderBrush="#FFD9E6EB"/>-->
+            <Button Content="Вернуться"  HorizontalAlignment="Left"  VerticalAlignment="Top"  Width="100" Foreground="#cc02c2" Background="#FFD9E6EB" BorderBrush="#FFD9E6EB" Command="{Binding ShowUserControl4Command}"/>
+        </StackPanel>
+
     </Grid>
 </UserControl>

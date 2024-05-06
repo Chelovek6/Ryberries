@@ -6,13 +6,29 @@
              xmlns:local="clr-namespace:Ryberries.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style TargetType="Button">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Margin" Value="-0.2"/>
+            <Setter Property="Foreground" Value="#cc02c2"/>
+            <Setter Property="Background" Value="#FFD9E6EB"/>
+            <Setter Property="BorderBrush" Value="#FFD9E6EB"/>
+            <Setter Property="FontSize" Value="18"/>
+        </Style>
+    </UserControl.Resources>
     <Grid>
         <TextBlock Text="Авторизация" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0" FontSize="55" Foreground="#cc02c2"/>
-        <Button Content="Войти" HorizontalAlignment="Center" Margin="0,350,0,0" VerticalAlignment="Top" Height="46" Width="100" Command="{Binding ShowUserControl10Command}"/>
-        <TextBox HorizontalAlignment="Center" Margin="0,184,0,0" TextWrapping="Wrap" Text="Логин" VerticalAlignment="Top" Width="287"/>
-        <TextBox HorizontalAlignment="Center" Margin="0,270,0,0" TextWrapping="Wrap" Text="Пароль" VerticalAlignment="Top"  Width="287"/>
-        <Button Content="ВойтиР" HorizontalAlignment="Left" Margin="521,350,0,0" VerticalAlignment="Top" Height="46" Width="100" />
-        <Button Content="ВойтиА" HorizontalAlignment="Left" Margin="155,350,0,0" VerticalAlignment="Top" Height="46" Width="100" />
-
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,100">
+            <TextBox Text="Логин" TextWrapping="Wrap" Width="287" Margin="0,0,0,10"/>
+            <TextBox Text="Пароль" TextWrapping="Wrap" Width="287" Margin="0,0,0,10"/>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Войти" Command="{Binding ShowUserControl10Command}" Margin="0,0,10,0"/>
+                <Button Content="ВойтиР" Command="{Binding ShowUserControl2Command}" Margin="0,0,10,0"/>
+                <Button Content="ВойтиА" Command="{Binding ShowUserControl4Command}"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </UserControl>

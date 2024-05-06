@@ -6,11 +6,79 @@
              xmlns:local="clr-namespace:Ryberries.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <!-- Стиль для кнопки "View Goods" -->
+        <Style x:Key="ViewGoodsButtonStyle" TargetType="Button">
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Margin" Value="0 0 0 10"/>
+            <Setter Property="Foreground" Value="#cc02c2"/>
+            <Setter Property="Background" Value="#FFD9E6EB"/>
+            <Setter Property="BorderBrush" Value="#FFD9E6EB"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                Background="{TemplateBinding Background}"
+                                CornerRadius="15">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Стиль для кнопки "Log Out" -->
+        <Style x:Key="LogOutButtonStyle" TargetType="Button">
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Margin" Value="0 0 10 10"/>
+            <Setter Property="Foreground" Value="#cc02c2"/>
+            <Setter Property="Background" Value="#FFD9E6EB"/>
+            <Setter Property="BorderBrush" Value="#FFD9E6EB"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                Background="{TemplateBinding Background}"
+                                CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
     <Grid>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="Staff Main View" FontSize="24" FontWeight="Bold" Foreground="#cc02c2" Margin="0 0 0 20"/>
-            <Button Content="View Goods"  Width="120" Margin="0 0 10 0" Foreground="#cc02c2" Background="#FFD9E6EB" BorderBrush="#FFD9E6EB" Height="40"/>
-            <Button Content="Log Out"  Width="120" Foreground="#cc02c2" Background="#FFD9E6EB" BorderBrush="#FFD9E6EB" Height="40" Command="{Binding ShowUserControl5Command}"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Надпись Ryberries в левом верхнем углу -->
+        <TextBlock Text="Ryberries" FontSize="24" FontWeight="Bold" Foreground="#cc02c2" Margin="10"/>
+
+        <!-- Кнопки для перехода между View по центру -->
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="Редактор Товаров"  Style="{StaticResource ViewGoodsButtonStyle}" Command="{Binding ShowUserControl5Command}"/>
+            <!-- Добавьте другие кнопки здесь при необходимости -->
         </StackPanel>
+
+        <!-- Кнопка Log Out в правом нижнем углу -->
+        <Button Content="Выйти" Grid.Row="2" Style="{StaticResource LogOutButtonStyle}" Command="{Binding ShowUserControl3Command}"/>
     </Grid>
 </UserControl>

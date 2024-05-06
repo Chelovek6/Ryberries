@@ -14,6 +14,6 @@
                 <DataGridTextColumn Header="Position" Binding="{Binding Position}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Back"  HorizontalAlignment="Left" Margin="690,394,0,0" VerticalAlignment="Top" Height="46" Width="100" Foreground="#cc02c2" Background="#FFD9E6EB" BorderBrush="#FFD9E6EB" Command="{Binding ShowUserControl8Command}"/>
+        <Button Content="Back"  HorizontalAlignment="Left" Margin="690,394,0,0" VerticalAlignment="Top" Height="46" Width="100" Foreground="#cc02c2" Background="#FFD9E6EB" BorderBrush="#FFD9E6EB" Command="{Binding ShowUserControl4Command}"/>
     </Grid>
 </UserControl>

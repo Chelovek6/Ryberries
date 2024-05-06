@@ -24,5 +24,7 @@ namespace Ryberries.View
         {
             InitializeComponent();
         }
+
     }
+
 }
