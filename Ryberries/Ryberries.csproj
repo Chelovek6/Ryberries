@@ -93,6 +93,7 @@
     <Compile Include="Model\Staff.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\WarehouseСells.cs" />
+    <Compile Include="ViewModel\AuthorizationService.cs" />
     <Compile Include="ViewModel\GoodsViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\StaffViewModel.cs" />
