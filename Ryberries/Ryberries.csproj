@@ -93,7 +93,9 @@
     <Compile Include="Model\Staff.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\WarehouseСells.cs" />
+    <Compile Include="ViewModel\GoodsViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\StaffViewModel.cs" />
     <Compile Include="View\AdminGoodsView.xaml.cs">
       <DependentUpon>AdminGoodsView.xaml</DependentUpon>
     </Compile>

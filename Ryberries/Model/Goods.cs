@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ryberries.Model
 {
-    internal class Goods
+    public class Goods
     {
         public int GoodsArticle { get; set; }
         public string Name { get; set; }
@@ -23,6 +23,6 @@ namespace Ryberries.Model
             Rating = rating;
         }
     }
-
+    //(localdb)\MSSQLLocalDB
 
 }

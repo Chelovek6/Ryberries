@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:vm="clr-namespace:Ryberries.ViewModel"
              xmlns:local="clr-namespace:Ryberries.View"
              mc:Ignorable="d" 
              
@@ -23,7 +24,7 @@
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel HorizontalAlignment="Center"  Grid.Row="1" Orientation="Horizontal">
-            <Button x:Name="updateButton" Content="Обновить" Click="updateButton_Click" Width="100" Foreground="#cc02c2" Background="#FFD9E6EB" BorderBrush="#FFD9E6EB"/>
+            <Button x:Name="updateButton" Content="Обновить"  Width="100" Foreground="#cc02c2" Background="#FFD9E6EB" BorderBrush="#FFD9E6EB"/>
             <!--<Button x:Name="deleteButton" Content="Удалить" Click="deleteButton_Click" Width="100" Foreground="#cc02c2" Background="#FFD9E6EB" BorderBrush="#FFD9E6EB"/>-->
             <Button Content="Вернуться"  HorizontalAlignment="Left"  VerticalAlignment="Top"  Width="100" Foreground="#cc02c2" Background="#FFD9E6EB" BorderBrush="#FFD9E6EB" Command="{Binding ShowUserControl10Command}"/>
         </StackPanel>
